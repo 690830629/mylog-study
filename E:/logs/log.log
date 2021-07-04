@@ -1,0 +1,10 @@
+2021-06-20 16:44:00  [ main:0 ] - [ FATAL ]  fatal
+2021-06-20 16:44:00  [ main:3 ] - [ INFO ]  error
+2021-06-20 16:44:00  [ main:3 ] - [ WARN ]  warn
+2021-06-20 16:44:00  [ main:3 ] - [ INFO ]  info
+2021-06-20 16:44:00  [ main:3 ] - [ DEBUG ]  debug
+2021-06-20 16:49:52  [ main:0 ] - [ FATAL ]  fatal
+2021-06-20 16:49:52  [ main:4 ] - [ INFO ]  error
+2021-06-20 16:49:52  [ main:4 ] - [ WARN ]  warn
+2021-06-20 16:49:52  [ main:4 ] - [ INFO ]  info
+2021-06-20 16:49:52  [ main:4 ] - [ DEBUG ]  debug

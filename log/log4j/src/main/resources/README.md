@@ -1,0 +1,8 @@
+Logger 日志记录器 负责收集处理日志记录 指定日志的级别,跟消息的信息
+Log4j 有一个特殊的logger叫做root 是所有的logger的根 也就意味着其他所有的logger都会直接或间接
+地继承自root rootLogger 可以用Logger.getRootLogger()方法代替
+Appender 用来执行日志输出到哪个地方 可以同时指定日志的输出目的地
+Layouts 布局器用于控制日志输出内容的格式 让我们可以使用各种需要的格式输出日志
+
+
+LogManager 日志管理器对象 加载日志文件的
