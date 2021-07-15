@@ -11,8 +11,8 @@ package com.iqiyi.logtest;
 
 public class LogTest {
     public static void main(String[] args) {
-        com.iqiyi.log4j.HelloWord.main(args);
-        com.iqiyi.log4j2.HelloWord.main(args);
-        com.iqiyi.logback.HelloWord.main(args);
+        com.wanglei.log4j.HelloWord.main(args);
+        com.wanglei.log4j2.HelloWord.main(args);
+        com.wanglei.logback.HelloWord.main(args);
     }
 }

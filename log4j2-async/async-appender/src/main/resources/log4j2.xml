@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" monitorInterval="60">
+    <Properties>
+        <Property name="LOG_HOME">./qae/log</Property>
+    </Properties>
+
+    <Appenders>
+        <Console
+                name="ConsoleAppender"
+                target="SYSTEM_OUT">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %L: %m%n"/>
+        </Console>
+        <RollingFile
+                name="RollingFileAppender"
+                fileName="${LOG_HOME}/creation-video-api.log"
+                filePattern="${LOG_HOME}/creation-video-api.log.%i">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{DEFAULT} [%traceId] %p %t %c %L: %m%n"/>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <!--<TimeBasedTriggeringPolicy/>-->
+                <SizeBasedTriggeringPolicy size="256MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="RollingFileAppender"/>
+        </Root>
+        <Logger name="com.wanglei.mylog" additivity="false" level="info">
+            <AppenderRef ref="ConsoleAppender"/>
+
+        </Logger>
+
+        <Logger name="com.wanglei.mylog.test2"  additivity="true" level="WARN">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>
